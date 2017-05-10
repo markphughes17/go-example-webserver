@@ -1,8 +1,7 @@
 pipeline:
   build:
     image: docker
-      volumes:
-	- /var/run/docker.sock:/var/run/docker.sock
-      commands:
-        - docker build -t markhughes89/go-example-webserver
-
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    commands:
+      - docker build -t markhughes89/go-example-webserver
