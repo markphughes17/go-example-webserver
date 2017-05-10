@@ -5,3 +5,10 @@ pipeline:
       - /var/run/docker.sock:/var/run/docker.sock
     commands:
       - docker build -t markhughes89/go-example-webserver .
+
+  test:
+    image: docker
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    commands:
+      - docker run markhughes89/go-example-webserver /test.sh
